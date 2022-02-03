@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 if (ActivityCompat.checkSelfPermission(MainActivity.this,i)!= PackageManager.PERMISSION_GRANTED){
                     notGrantedPermission.add(i);
                 }
+//                else{
+//                    if (i.equals(Manifest.permission.READ_EXTERNAL_STORAGE)){
+//                        musicFragment.setMusic();
+//                    }
+//                    if (i.equals(Manifest.permission.READ_CONTACTS)){
+//                        contectFragment.setRecycler();
+//                    }
+//                }
             }
             if(!notGrantedPermission.isEmpty()){
                 ActivityCompat.requestPermissions(this,notGrantedPermission.toArray(new String[notGrantedPermission.size()]),REQUEST_MULTIPLE);
